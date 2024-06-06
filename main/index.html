@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Basic formatting and title -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Krishiv and Rohan's Task Manager</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/desktop/favicon.ico">
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <div class="header">
+    <h1>Task Manager</h1>
+    <span style="font-weight:normal">
+      <h4>By: Krishiv Kothari and Rohan Enjeti</h4>
+    </span>
+  </div>
+
+  <form>
+    <fieldset>
+      <!-- Input name and due date-->
+      <legend>Add Task</legend>
+      <label for="text">Task Name:</label>
+      <input class="textInput" type="text" name="taskName" id="taskName" placeholder="Task">
+      <br>
+
+      <label for="taskDueDate">Due Date:</label>
+      <input class="textInput" type="date" name="taskDueDate" id="taskDueDate">
+      <br>
+
+      <label for="taskPriority">Priority:</label>
+      <input class="textInput" type="number" name="urgency" id="taskPriority" min="0" max="9">
+      <br>
+      <input class="sortButton" type="button" onclick="addTask()" value="Add to Table" id="addButton"></input>
+    </fieldset>
+  </form>
+  <div class="sortButtonBox">
+    <form>
+      <input type="button" class="sortButton" onclick="sortByName()" value="Sort by Name" id="sort"></input>
+      <input type="button" class="sortButton" onclick="sortByNameReverse()" value="Sort by Name (Reverse)"
+        id="sort"></input>
+      <br>
+
+      <input type="button" class="sortButton" onclick="sortByDueDate()" value="Sort by Due Date" id="sort"></input>
+      <input type="button" class="sortButton" onclick="sortByDueDateReverse()" value="Sort by Due Date (Reverse)"
+        id="sort"></input>
+      <br>
+
+      <input type="button" class="sortButton" onclick="sortByTimeCreated()" value="Sort by Time Created"
+        id="sort"></input>
+      <input type="button" class="sortButton" onclick="sortByTimeCreatedReverse()"
+        value="Sort by Time Created (Reverse)" id="sort"></input>
+      <br>
+      <input type="button" class="sortButton" onclick="sortByPriority()" value="Sort by Priority" id="sort"></input>
+      <input type="button" class="sortButton" onclick="sortByPriorityReverse()" value="Sort by Priority (Reverse)"
+        id="sort"></input>
+    </form>
+  </div>
+
+  <!-- Create header cells for the table of tasks -->
+  <table id="taskTable">
+    <thead id="taskTableHead">
+      <th>Task Name</th>
+      <th>Due Date</th>
+      <th>Time Created</th>
+      <th>Completed?</th>
+      <th>Date Completed</th>
+      <th>Urgency Rank (0-9)</th>
+    </thead>
+
+    <tbody id="taskTableBody">
+    </tbody>
+  </table>
+
+  <!-- Buttons to download the highlight the last thirty days of completed tasks, reset colors, & daily update-->
+  <div class="lowerButtons">
+    <input type="button" class="sortButton" onclick="thirtyDays()" value="Show Last 30 Days of Completed Tasks"
+      id="sort"></input>
+    <input type="button" class="sortButton" onclick="resetColor()" value="Reset Colors" id="sort"></input>
+    <input type="button" class="sortButton" onclick="daily()" value="Download Daily Update" id="sort"></input>
+  </div>
+
+</body>
+
+</html>

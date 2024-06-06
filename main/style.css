@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0051ba;
+  font-family: halyard, verdana, sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+/* Makes the border of the field set solid blue with rounded corners, among other margins */
+fieldset {
+  border-color: #0051ba;
+  border-style: solid;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: halyard, verdana, sans-serif;
+}
+
+.textInput {
+  text-align: center;
+  width: 50%;
+  border-style: none;
+  border-bottom: solid;
+}
+
+.sortButton {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e8000d;
+  color: #FFFFFF;
+  border-style: none;
+  height: 35px;
+  font-family: halyard, verdana, sans-serif;
+}
+
+.sortButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lowerButtons {
+  text-align: center;
+}
+
+legend {
+  padding: 0%;
+}
+
+.sortButtonBox {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  font-family: halyard, verdana, sans-serif;
+  text-align: left;
+  border-collapse: collapse;
+  border-style: none;
+  line-height: 25px;
+  color: #003459;
+  background-color: #FFFFFF;
+}
+
+thead {
+  color: #e8000d;
+  border-bottom-style: solid;
+  padding: 10%;
+}
+
+tr {
+  padding: 100px, 0;
+}
+
+td {
+  word-wrap: wrap;
+  border-bottom-style: solid;
+  border-color: #000000;
+}
+
+/* Changes the background color of each table row whenever it is hovered over */
+tr:hover {
+  background-color: #e6e6e6;
+}
